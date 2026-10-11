@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoMind AI</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar/Dashboard -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-brain"></i> EchoMind AI
+            </div>
+            
+            <div class="dashboard-section">
+                <h3>Today's Overview</h3>
+                <div class="stat-card">
+                    <span class="stat-label">Tasks</span>
+                    <span class="stat-value" id="totalTasks">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Pending</span>
+                    <span class="stat-value" id="pendingTasks">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Completed</span>
+                    <span class="stat-value" id="completedTasks">0</span>
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <h3>Upcoming Reminders</h3>
+                <ul id="reminderList" class="reminder-list">
+                    <!-- Reminders will be injected here -->
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <div class="chat-header">
+                <h2>Your intelligent personal action assistant</h2>
+            </div>
+            
+            <div class="chat-box" id="chatBox">
+                <div class="message assistant">
+                    Hello! I am EchoMind AI. How can I help you manage your tasks and reminders today?
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <button id="voiceBtn" class="icon-btn" title="Speak"><i class="fas fa-microphone"></i></button>
+                <input type="text" id="userInput" placeholder="Ask me to add a task, set a reminder, or summarize your day..." autocomplete="off">
+                <button id="sendBtn" class="icon-btn send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/frontend/script.js"></script>
+</body>
+</html>
